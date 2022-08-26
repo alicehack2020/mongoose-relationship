@@ -1,0 +1,31 @@
+const Blogs=new mongoose.Schema({
+	blog_id:{type:number},
+	blog_body:{type:String},
+	category_ids:{type:[Number]} 
+})
+
+
+const user=new mongoose.Schema({
+	user_id:{type:Number},
+	user_name:{type:String},
+	user_avatar:{type:String},
+        blog_ids:{type:[Number]} 
+})
+
+const category=new mongoose.Schema({
+	category_id:{type:Number},
+	category_title:{type:String}
+})
+
+
+const comments=new mongoose.Schema({
+	comment_id:{type:Number},
+	blog_id:{type:Number},
+	user_id:{type:Number}
+})
+
+const like=new mongoose.Schema({
+	like_id:{type:Number},
+	user_id:{type:Number},
+	blog-id:{type:Number}
+})
